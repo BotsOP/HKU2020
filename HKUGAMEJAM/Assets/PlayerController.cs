@@ -28,14 +28,7 @@ public class PlayerController : MonoBehaviour
     void Move()
     {
         var movement = Input.GetAxis("Horizontal");
-        if(movement > 0)
-        {
-            movementAcc += movementExtraAcc;
-        }
-        else if(movement <= 0 && movementAcc > 1)
-            movementAcc -= movementExtraDeAcc;
-        
-        transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * MovementSpeed * (movementAcc + 1);
+        transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * MovementSpeed;
     }
 
     void Jump()
