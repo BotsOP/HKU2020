@@ -11,10 +11,10 @@ public class Spawner : MonoBehaviour
 
     void Start()
     {
-        
+        SpawnObject();
     }
 
-    void Update()
+    public void SpawnObject()
     {
         MeshCollider c = quad.GetComponent<MeshCollider>();
 
@@ -27,5 +27,10 @@ public class Spawner : MonoBehaviour
 
             Instantiate(page, loc, page.transform.rotation);
         }
+    }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        Destroy(this);
     }
 }
