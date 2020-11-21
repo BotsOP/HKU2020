@@ -25,7 +25,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8426881040655179085}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pos1
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
@@ -55,7 +55,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8426881041436662480}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Pos2
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
@@ -85,9 +85,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8426881041951341382}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MovingPlatform
-  m_TagString: Untagged
+  m_TagString: JumpThrough
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -180,6 +180,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: MovingPlatform
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093649248612169210, guid: dfdcdf8d938e2864fb54d12580851ce7,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1093649248612169210, guid: dfdcdf8d938e2864fb54d12580851ce7,
+        type: 3}
+      propertyPath: m_TagString
+      value: JumpThrough
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfdcdf8d938e2864fb54d12580851ce7, type: 3}

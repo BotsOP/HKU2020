@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 22987692117646412}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RealMovingPlatform
-  m_TagString: Untagged
+  m_TagString: JumpThrough
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5054918928124488029}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.0672107, y: 1.5978644, z: -5.2490234}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7483682594823479319}
@@ -67,7 +67,12 @@ PrefabInstance:
     - target: {fileID: 7162584833285481435, guid: 8412a8f215ee6154b9cd8118df72dd90,
         type: 3}
       propertyPath: m_TagString
-      value: MovingPlatform
+      value: JumpThrough
+      objectReference: {fileID: 0}
+    - target: {fileID: 8426881040655179084, guid: 8412a8f215ee6154b9cd8118df72dd90,
+        type: 3}
+      propertyPath: m_TagString
+      value: JumpThrough
       objectReference: {fileID: 0}
     - target: {fileID: 8426881041436662480, guid: 8412a8f215ee6154b9cd8118df72dd90,
         type: 3}
@@ -94,6 +99,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.1197
       objectReference: {fileID: 0}
+    - target: {fileID: 8426881041436662483, guid: 8412a8f215ee6154b9cd8118df72dd90,
+        type: 3}
+      propertyPath: m_TagString
+      value: JumpThrough
+      objectReference: {fileID: 0}
     - target: {fileID: 8426881041951341377, guid: 8412a8f215ee6154b9cd8118df72dd90,
         type: 3}
       propertyPath: m_Name
@@ -102,7 +112,7 @@ PrefabInstance:
     - target: {fileID: 8426881041951341377, guid: 8412a8f215ee6154b9cd8118df72dd90,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: JumpThrough
       objectReference: {fileID: 0}
     - target: {fileID: 8426881041951341382, guid: 8412a8f215ee6154b9cd8118df72dd90,
         type: 3}
@@ -242,7 +252,12 @@ PrefabInstance:
     - target: {fileID: 7162584833285481435, guid: 8412a8f215ee6154b9cd8118df72dd90,
         type: 3}
       propertyPath: m_TagString
-      value: MovingPlatform
+      value: JumpThrough
+      objectReference: {fileID: 0}
+    - target: {fileID: 8426881040655179084, guid: 8412a8f215ee6154b9cd8118df72dd90,
+        type: 3}
+      propertyPath: m_TagString
+      value: JumpThrough
       objectReference: {fileID: 0}
     - target: {fileID: 8426881041436662480, guid: 8412a8f215ee6154b9cd8118df72dd90,
         type: 3}
@@ -268,6 +283,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 1.1197
+      objectReference: {fileID: 0}
+    - target: {fileID: 8426881041436662483, guid: 8412a8f215ee6154b9cd8118df72dd90,
+        type: 3}
+      propertyPath: m_TagString
+      value: JumpThrough
       objectReference: {fileID: 0}
     - target: {fileID: 8426881041951341377, guid: 8412a8f215ee6154b9cd8118df72dd90,
         type: 3}
