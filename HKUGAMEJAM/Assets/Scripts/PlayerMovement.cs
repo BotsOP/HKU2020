@@ -5,9 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float movementSpeed, jumpForce;
-    bool isright, isleft;
 
-
+    bool isRight;
 
     public Animator anim;
    
@@ -16,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        isRight = true;
         
     }
 
@@ -24,19 +24,17 @@ public class PlayerMovement : MonoBehaviour
         float movement = Input.GetAxis("Horizontal");
         if (Input.GetKey(KeyCode.A))
         {
-
             transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * movementSpeed;
-            anim.SetBool("walking", true);
-            print("walk trued");
+            isRight = false;
 
+            anim.SetBool("walking", true);
         }
         if (Input.GetKey(KeyCode.D))
         {
             transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * movementSpeed;
+            isRight = true;
            
             anim.SetBool("walking", true);
-            print("walk trued");
-
         }
 
         if (Input.GetKey(KeyCode.Space))
@@ -48,12 +46,11 @@ public class PlayerMovement : MonoBehaviour
         if (movement == 0)
         {
             anim.SetBool("walking", false);
-            print("walk false");
-
         }
-       
 
-
-
+        if(isRight == false)
+            transform.localScale = new Vector2(.25f, transform.localScale.y);
+        else
+            transform.localScale = new Vector2(-.25f, transform.localScale.y);
     }
 }

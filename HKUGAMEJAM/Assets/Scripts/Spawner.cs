@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public Sprite page;
+    public GameObject page;
     public Vector2 loc;
     float screenX, screenY;
     public GameObject quad;
+
+    
 
     void Start()
     {
@@ -25,12 +27,7 @@ public class Spawner : MonoBehaviour
 
             loc = new Vector2(screenX, screenY);
 
-            //GameObject Page = Instantiate(Resources.Load("Paper") as GameObject);
+            Instantiate(page, loc, page.transform.rotation);
         }
-    }
-
-    public void OnTriggerEnter2D(Collider2D other)
-    {
-        Destroy(this);
     }
 }
