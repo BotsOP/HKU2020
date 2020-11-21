@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] bool useArrowKeys;
     [SerializeField] float fallMultiplier = 2.5f;
     [SerializeField] float lowJumpMultiplier = 3;
     [SerializeField] float MovementSpeed = 5;
     [SerializeField] float jumpForce = 10;
     [SerializeField] LayerMask groundLayer;
     [SerializeField] Transform feet;
+    [SerializeField] Transform head;
     bool isGrounded;
     int jumpCount;
     float jumpCoolDown;
+    float movement;
     [SerializeField] int extraJumps = 2;
 
     Rigidbody2D rb;
@@ -25,28 +28,54 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Move();
-        if(Input.GetButtonDown("Jump"))
+        if (useArrowKeys)
         {
-            Jump();
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+                Jump();
         }
-        
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.W))
+                Jump();
+        }
 
         CheckGrounded();
     }
 
     void Move()
     {
-        var movement = Input.GetAxis("Horizontal");
+        if(useArrowKeys)
+            movement = Input.GetAxis("HorizontalArrow");
+        else
+            movement = Input.GetAxis("Horizontal");
+
         transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * MovementSpeed;
 
-        if (rb.velocity.y < 0)
+        if (useArrowKeys)
         {
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+            if (rb.velocity.y < 0)
+            {
+                rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+            }
+
+            else if (rb.velocity.y > 0 && !Input.GetKey(KeyCode.UpArrow))
+            {
+                rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+            }
         }
-        else if (rb.velocity.y > 0 && !Input.GetButton("Jump"))
+        else
         {
-            rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+            if (rb.velocity.y < 0)
+            {
+                rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+            }
+
+            else if (rb.velocity.y > 0 && !Input.GetKey(KeyCode.W))
+            {
+                rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
+            }
         }
+        
     }
 
     void CheckGrounded()
@@ -73,8 +102,10 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             jumpCount++;
         }
+    }
 
-        Debug.Log(rb.velocity.y);
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
         
     }
 
