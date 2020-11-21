@@ -1742,6 +1742,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 1.827815
       objectReference: {fileID: 0}
+    - target: {fileID: 6877119578312562593, guid: ee52214283cebef4eb7386f53fff24f2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2056989133, guid: ee52214283cebef4eb7386f53fff24f2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ee52214283cebef4eb7386f53fff24f2, type: 3}
@@ -4274,7 +4279,7 @@ Animator:
   m_GameObject: {fileID: 1525740319}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: fba2df3049e77a149af0170909fa12f9, type: 2}
+  m_Controller: {fileID: 9100000, guid: c662a44a03bc22b46a9517335c92fbd4, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
