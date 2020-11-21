@@ -41,6 +41,4 @@ public class FallingThrough : MonoBehaviour
         Debug.Log(oriSize + "test2");
         boxcol.size = oriSize;
     }
-
-
 }
