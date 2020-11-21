@@ -11,7 +11,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float jumpForce = 10;
     [SerializeField] LayerMask groundLayer;
     [SerializeField] Transform feet;
-    [SerializeField] Transform head;
     [SerializeField] int extraJumps = 2;
     bool isGrounded;
     int jumpCount;
