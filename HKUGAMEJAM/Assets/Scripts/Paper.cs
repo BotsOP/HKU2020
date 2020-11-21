@@ -32,9 +32,8 @@ public class Paper : MonoBehaviour
                 gm.scorePlayer2 += 0.5f;
                 scoreTextPlayer1.text = ("Player 2:") + gm.scorePlayer2 + (" / 5");
             }
-
-        Debug.Log(collision.name);
-        Destroy(gameObject);
+            GameObject.Find("PaperSpawner").GetComponent<Spawner>().SpawnNextPaper();
+            Destroy(gameObject);
         }
     }
 }
