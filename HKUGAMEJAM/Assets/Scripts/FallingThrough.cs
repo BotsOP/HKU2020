@@ -21,21 +21,6 @@ public class FallingThrough : MonoBehaviour
 
     void Update()
     {
-        //Debug.Log(newY);
-        //if(shouldLerp)
-        //{
-        //    shouldStartTime = false;
-        //    newY = Mathf.Lerp(oriSize.y, 0, Time.time - (startTime));
-        //    if (Time.time - startTime > 2)
-        //    {
-        //        shouldLerp = false;
-        //        newY = oriSize.y;
-        //        shouldStartTime = true;
-        //    }
-        //    boxcol.size = new Vector2(oriSize.x, newY);
-
-        //}
-
         if(boxcol.size.y < 0.01 && Time.time - startTime > timeToRespawn)
         {
             boxcol.size = oriSize;

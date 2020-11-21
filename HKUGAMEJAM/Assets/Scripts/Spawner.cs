@@ -4,18 +4,15 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    [SerializeField] GameObject paper;
-    [SerializeField] GameObject[] paperPositions;
-
+    // Start is called before the first frame update
     void Start()
     {
-        SpawnNextPaper();
+        
     }
 
-    public void SpawnNextPaper()
+    // Update is called once per frame
+    void Update()
     {
-        int indexInt = Random.Range(0,paperPositions.Length);
-        Debug.Log(indexInt);
-        Instantiate(paper, paperPositions[indexInt].transform.position, Quaternion.identity);
+        
     }
 }
