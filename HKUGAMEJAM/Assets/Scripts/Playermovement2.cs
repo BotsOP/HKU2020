@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class Playermovement2 : MonoBehaviour
 {
     public float movementSpeed, jumpForce;
 
@@ -15,18 +15,18 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
             var movement = Input.GetAxis("Horizontal");
             transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * movementSpeed;
         }
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.RightArrow))
         {
             var movement = Input.GetAxis("Horizontal");
             transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * movementSpeed;
         }
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.UpArrow))
         {
             if (Input.GetButtonDown("Jump") && Mathf.Abs(rb.velocity.y) < 0.001)
                 rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
