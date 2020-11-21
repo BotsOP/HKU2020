@@ -24,8 +24,8 @@ public class Paper : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D collision)
     {
         scoreCount += 1;
-        scoreTextPlayer1.text = ("Player 1:") + scoreCount + (" / 5");
-        scoreTextPlayer2.text = ("Player 2:") + scoreCount + (" / 5");
+        scoreTextPlayer1.text = ("Player 1: ") + scoreCount + (" / 5");
+        scoreTextPlayer2.text = ("Player 2: ") + scoreCount + (" / 5");
 
         Debug.Log("got the paper");
         Destroy(gameObject);
