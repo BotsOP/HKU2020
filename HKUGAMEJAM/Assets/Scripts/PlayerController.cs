@@ -11,8 +11,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] LayerMask groundLayer;
     [SerializeField] Transform feet;
     bool isGrounded;
+    int jumpCount;
     float jumpCoolDown;
-    int amountJumps = 2;
+    [SerializeField] int extraJumps = 2;
 
     Rigidbody2D rb;
 
@@ -24,34 +25,58 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         Move();
-        Jump();
+        if(Input.GetButtonDown("Jump"))
+        {
+            Jump();
+        }
+        
+
+        CheckGrounded();
     }
 
     void Move()
     {
         var movement = Input.GetAxis("Horizontal");
         transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * MovementSpeed;
-    }
 
-    void Jump()
-    {
-        if(Input.GetButtonDown("Jump") && amountJumps > 0)
-        {
-            rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-            amountJumps--;
-        }
-        if(Mathf.Abs(rb.velocity.y) < 0.001)
-        {
-            amountJumps = 2;
-        }
-
-        if(rb.velocity.y < 0)
+        if (rb.velocity.y < 0)
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }
-        else if(rb.velocity.y > 0 && !Input.GetButton("Jump"))
+        else if (rb.velocity.y > 0 && !Input.GetButton("Jump"))
         {
             rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
     }
+
+    void CheckGrounded()
+    {
+        if(Physics2D.OverlapCircle(feet.position, 0.5f, groundLayer))
+        {
+            isGrounded = true;
+            jumpCount = 0;
+            jumpCoolDown = Time.time + 0.2f;
+        } else if(Time.time < jumpCoolDown)
+        {
+            isGrounded = true;
+        } else
+        {
+            isGrounded = false;
+        }
+
+    }
+
+    void Jump()
+    {
+        if(isGrounded || jumpCount < extraJumps)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            jumpCount++;
+        }
+
+        Debug.Log(rb.velocity.y);
+        
+    }
+
+
 }
