@@ -24,13 +24,13 @@ public class Paper : MonoBehaviour
         {
             if(collision.gameObject.name == "player 1")
             {
-                gm.scorePlayer1 += 0.5f;
+                gm.scorePlayer1 += 1;
                 scoreTextPlayer1.text = ("Player 1:") + gm.scorePlayer1 + (" / 5");
             }
             if(collision.gameObject.name == "player 2")
             {
-                gm.scorePlayer2 += 0.5f;
-                scoreTextPlayer1.text = ("Player 2:") + gm.scorePlayer2 + (" / 5");
+                gm.scorePlayer2 += 1;
+                scoreTextPlayer2.text = ("Player 2:") + gm.scorePlayer2 + (" / 5");
             }
             GameObject.Find("PaperSpawner").GetComponent<Spawner>().SpawnNextPaper();
             Destroy(gameObject);
