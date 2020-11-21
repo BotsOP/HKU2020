@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public int Score;
+    public float scorePlayer1;
+    public float scorePlayer2;
 
     private void Update()
     {
-        if(Score == 5)
+        if(scorePlayer1 == 3)
         {
-            Debug.Log("Player has won");
+            Debug.Log("Player1 has won");
+        }
+        if(scorePlayer2 == 3)
+        {
+            Debug.Log("Player2 has won");
         }
     }
 }

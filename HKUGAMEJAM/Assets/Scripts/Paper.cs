@@ -8,6 +8,8 @@ public class Paper : MonoBehaviour
     Text scoreTextPlayer1;
     Text scoreTextPlayer2;
     GameManager gm;
+    bool shouldCollect = true;
+    float startTime;
 
     void Start()
     {
@@ -16,21 +18,23 @@ public class Paper : MonoBehaviour
         scoreTextPlayer2 = GameObject.Find("Player2Score").GetComponent<Text>();
     }
 
-    void Update()
-    {
-        
-    }
-
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Player")
         {
-            gm.Score++;
-        scoreTextPlayer1.text = ("Player 1:") + gm.Score + (" / 5");
-        scoreTextPlayer2.text = ("Player 2:") + gm.Score + (" / 5");
+            if(collision.gameObject.name == "player 1")
+            {
+                gm.scorePlayer1 += 0.5f;
+                scoreTextPlayer1.text = ("Player 1:") + gm.scorePlayer1 + (" / 5");
+            }
+            if(collision.gameObject.name == "player 2")
+            {
+                gm.scorePlayer2 += 0.5f;
+                scoreTextPlayer1.text = ("Player 2:") + gm.scorePlayer2 + (" / 5");
+            }
 
-        Debug.Log("got the paper");
+        Debug.Log(collision.name);
         Destroy(gameObject);
-        } 
+        }
     }
 }
