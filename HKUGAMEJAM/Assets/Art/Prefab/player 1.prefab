@@ -311,7 +311,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6877119576705385740}
   - component: {fileID: 6877119576705385741}
-  - component: {fileID: 2056989133}
   m_Layer: 0
   m_Name: body
   m_TagString: Untagged
@@ -327,7 +326,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6877119576705385742}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.10633677, y: 1.52, z: 1.827815}
+  m_LocalPosition: {x: 0.62856, y: 1.52, z: 1.827815}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6877119578598208775}
@@ -386,25 +385,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &2056989133
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6877119576705385742}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c662a44a03bc22b46a9517335c92fbd4, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6877119577179515652
 GameObject:
   m_ObjectHideFlags: 0
@@ -430,7 +410,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6877119577179515652}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.6865615, y: -0.98, z: 1.8278152}
+  m_LocalPosition: {x: 0.28, y: -0.98, z: 1.8278152}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6453689148590212690}
@@ -512,7 +492,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6877119578194860066}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.12, y: -0.98, z: 1.8278152}
+  m_LocalPosition: {x: 1.0866, y: -0.98, z: 1.8278152}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6453689148590212690}
