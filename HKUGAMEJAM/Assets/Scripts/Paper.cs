@@ -23,11 +23,14 @@ public class Paper : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        gm.Score++;
+        if(collision.gameObject.tag == "Player")
+        {
+            gm.Score++;
         scoreTextPlayer1.text = ("Player 1:") + gm.Score + (" / 5");
         scoreTextPlayer2.text = ("Player 2:") + gm.Score + (" / 5");
 
         Debug.Log("got the paper");
         Destroy(gameObject);
+        } 
     }
 }

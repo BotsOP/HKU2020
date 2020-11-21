@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerController : MonoBehaviour
 {
@@ -12,10 +14,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] LayerMask groundLayer;
     [SerializeField] Transform feet;
     [SerializeField] int extraJumps = 2;
+    public Animator anim;
     bool isGrounded;
     int jumpCount;
     float jumpCoolDown;
     float movement;
+    bool isWalking;
     
 
     bool isRight;
@@ -24,6 +28,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
+        anim = gameObject.transform.GetChild(2).GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         isRight = true;
     }
@@ -42,6 +47,10 @@ public class PlayerController : MonoBehaviour
                 Jump();
         }
 
+        if(Input.GetKeyDown(KeyCode.R)){
+             Scene scene = SceneManager.GetActiveScene(); SceneManager.LoadScene(scene.name);
+         }
+
         CheckGrounded();
     }
 
@@ -51,6 +60,16 @@ public class PlayerController : MonoBehaviour
             movement = Input.GetAxis("HorizontalArrow");
         else
             movement = Input.GetAxis("Horizontal");
+
+        if(movement != 0)
+            anim.SetBool("walking", true);
+        else
+            anim.SetBool("walking", false);
+
+        if(isGrounded)
+            anim.SetBool("jumping", false);
+        else
+            anim.SetBool("jumping", true);
 
         transform.position += new Vector3(movement, 0, 0) * Time.deltaTime * MovementSpeed;
 
