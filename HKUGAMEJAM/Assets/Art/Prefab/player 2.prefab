@@ -57,7 +57,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.20784056}
+  m_Offset: {x: 0, y: 0.3205726}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -68,7 +68,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.4156811}
+  m_Size: {x: 1, y: 1.6411452}
   m_EdgeRadius: 0
 --- !u!1 &2732515051070630786
 GameObject:
@@ -619,12 +619,12 @@ MonoBehaviour:
   fallMultiplier: 2.5
   lowJumpMultiplier: 3
   MovementSpeed: 5
-  jumpForce: 15
+  jumpForce: 14
   groundLayer:
     serializedVersion: 2
     m_Bits: 256
   feet: {fileID: 2371169150043096561}
-  extraJumps: 2
+  extraJumps: 0
 --- !u!1 &8073369457115734240
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,7 +669,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.8146605}
+  m_Offset: {x: 0, y: 0.91825217}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -680,5 +680,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.7385763}
+  m_Size: {x: 1, y: 1.9457597}
   m_EdgeRadius: 0
