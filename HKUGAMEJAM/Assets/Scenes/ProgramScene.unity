@@ -215,7 +215,7 @@ GameObject:
   - component: {fileID: 530165428}
   - component: {fileID: 530165427}
   - component: {fileID: 530165426}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -323,8 +323,8 @@ GameObject:
   - component: {fileID: 1516180395}
   - component: {fileID: 1516180394}
   - component: {fileID: 1516180393}
-  - component: {fileID: 1516180392}
   - component: {fileID: 1516180396}
+  - component: {fileID: 1516180392}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -341,16 +341,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1516180391}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d7bdc55bf5b5e1c4585e3fd78a8bd070, type: 3}
+  m_Script: {fileID: 11500000, guid: a3307195f63562842bfb479f95b68f5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   fallMultiplier: 2.5
-  lowJumpMultiplier: 2
+  lowJumpMultiplier: 3
   MovementSpeed: 5
   jumpForce: 10
-  movementAcc: 0
-  movementExtraAcc: 0.01
-  movementExtraDeAcc: 0.1
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  feet: {fileID: 0}
 --- !u!61 &1516180393
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -437,7 +438,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.32, y: -1.69, z: -1.47274}
   m_LocalScale: {x: 4.8646, y: 15.505913, z: 4.8646}
-  m_Children: []
+  m_Children:
+  - {fileID: 1521976912}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -462,3 +464,33 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!1 &1521976911
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1521976912}
+  m_Layer: 0
+  m_Name: Feet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1521976912
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1521976911}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.0702, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1516180395}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

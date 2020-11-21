@@ -8,9 +8,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float lowJumpMultiplier = 3;
     [SerializeField] float MovementSpeed = 5;
     [SerializeField] float jumpForce = 10;
-    [SerializeField] float movementAcc;
-    [SerializeField] float movementExtraAcc;
-    [SerializeField] float movementExtraDeAcc;
+    [SerializeField] LayerMask groundLayer;
+    [SerializeField] Transform feet;
+    bool isGrounded;
+    float jumpCoolDown;
+    int amountJumps = 2;
 
     Rigidbody2D rb;
 
@@ -33,9 +35,14 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
-        if(Input.GetButtonDown("Jump") && Mathf.Abs(rb.velocity.y) < 0.001)
+        if(Input.GetButtonDown("Jump") && amountJumps > 0)
         {
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
+            amountJumps--;
+        }
+        if(Mathf.Abs(rb.velocity.y) < 0.001)
+        {
+            amountJumps = 2;
         }
 
         if(rb.velocity.y < 0)
