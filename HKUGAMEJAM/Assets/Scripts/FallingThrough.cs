@@ -4,29 +4,58 @@ using UnityEngine;
 
 public class FallingThrough : MonoBehaviour
 {
-    public float decaySpeed = -2f;
+    [SerializeField] float timeToRespawn;
+    [SerializeField] float decreasePlatform;
+    bool shouldLerp = false;
+    bool shouldStartTime;
+    float startTime;
+    float newY;
+    Vector2 oriSize;
+    BoxCollider2D boxcol;
 
     void Start()
     {
-
+        boxcol = GetComponent<BoxCollider2D>();
+        oriSize = boxcol.size;
     }
 
     void Update()
     {
+        //Debug.Log(newY);
+        //if(shouldLerp)
+        //{
+        //    shouldStartTime = false;
+        //    newY = Mathf.Lerp(oriSize.y, 0, Time.time - (startTime));
+        //    if (Time.time - startTime > 2)
+        //    {
+        //        shouldLerp = false;
+        //        newY = oriSize.y;
+        //        shouldStartTime = true;
+        //    }
+        //    boxcol.size = new Vector2(oriSize.x, newY);
 
-    }
+        //}
 
-    public void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
+        if(boxcol.size.y < 0.01 && Time.time - startTime > timeToRespawn)
         {
-            GetComponent<BoxCollider2D>().size += new Vector2(0f, decaySpeed);
+            boxcol.size = oriSize;
         }
     }
 
-    public void OnCollisionExit2D(Collision2D other)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        if (GetComponent<BoxCollider2D>().size.y <= 0.5f)
-            GetComponent<BoxCollider2D>().size = new Vector2(1f, 1f);
+        if (collision.gameObject.name == "Feet")
+        {
+            startTime = Time.time;
+            boxcol.size -= new Vector2(0, decreasePlatform);
+        }
     }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        Debug.Log(oriSize + "test2");
+        boxcol.size = oriSize;
+    }
+
+
 }

@@ -12,11 +12,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] LayerMask groundLayer;
     [SerializeField] Transform feet;
     [SerializeField] Transform head;
+    [SerializeField] int extraJumps = 2;
     bool isGrounded;
     int jumpCount;
     float jumpCoolDown;
     float movement;
-    [SerializeField] int extraJumps = 2;
+    
 
     bool isRight;
 
@@ -80,7 +81,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (movement <= 0)
+        if (movement < 0)
         {
             isRight = false;
             transform.localScale = new Vector2(.25f, transform.localScale.y);
