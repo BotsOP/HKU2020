@@ -18,11 +18,14 @@ public class PlayerController : MonoBehaviour
     float movement;
     [SerializeField] int extraJumps = 2;
 
+    bool isRight;
+
     Rigidbody2D rb;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        isRight = true;
     }
 
     void Update()
@@ -75,7 +78,18 @@ public class PlayerController : MonoBehaviour
                 rb.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
             }
         }
-        
+
+        if (movement <= 0)
+        {
+            isRight = false;
+            transform.localScale = new Vector2(.25f, transform.localScale.y);
+        }
+        else if(movement > 0)
+        {
+            isRight = true;
+            transform.localScale = new Vector2(-.25f, transform.localScale.y);
+        }
+
     }
 
     void CheckGrounded()
