@@ -457,9 +457,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4437307293449580508}
-  - component: {fileID: -2176879952540346632}
-  - component: {fileID: 5632939933861924983}
-  - component: {fileID: -6357711271736481405}
+  - component: {fileID: 117007607}
+  - component: {fileID: 117007608}
+  - component: {fileID: 117007606}
   m_Layer: 0
   m_Name: player 2
   m_TagString: Untagged
@@ -476,7 +476,7 @@ Transform:
   m_GameObject: {fileID: 7155580512274074344}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.171919, y: 0.171919, z: 0.171919}
   m_Children:
   - {fileID: 2732515051652101804}
   - {fileID: 2732515052134471842}
@@ -484,7 +484,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &-2176879952540346632
+--- !u!50 &117007607
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -504,8 +504,8 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!61 &5632939933861924983
+  m_Constraints: 4
+--- !u!61 &117007608
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -518,7 +518,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.28457177, y: 1.4702754}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -529,9 +529,9 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 3.1627362, y: 6.5206537}
   m_EdgeRadius: 0
---- !u!114 &-6357711271736481405
+--- !u!114 &117007606
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -540,13 +540,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 7155580512274074344}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3307195f63562842bfb479f95b68f5b, type: 3}
+  m_Script: {fileID: 11500000, guid: 4359513f1bee8e540b733c6a2b694e44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fallMultiplier: 10
-  lowJumpMultiplier: 3
-  MovementSpeed: 15
-  jumpForce: 25
-  movementAcc: 0
-  movementExtraAcc: 0
-  movementExtraDeAcc: 0
+  movementSpeed: 5
+  jumpForce: 10

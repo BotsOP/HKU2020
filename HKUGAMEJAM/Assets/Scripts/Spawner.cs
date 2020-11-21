@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public GameObject page;
+    public Sprite page;
     public Vector2 loc;
     float screenX, screenY;
     public GameObject quad;
@@ -25,7 +25,7 @@ public class Spawner : MonoBehaviour
 
             loc = new Vector2(screenX, screenY);
 
-            Instantiate(page, loc, page.transform.rotation);
+            //GameObject Page = Instantiate(Resources.Load("Paper") as GameObject);
         }
     }
 
