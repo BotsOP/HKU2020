@@ -12,7 +12,8 @@ public class Paper : MonoBehaviour
 
     void Start()
     {
-
+        scoreTextPlayer1 = GameObject.Find("Player1Score").GetComponent<Text>();
+        scoreTextPlayer2 = GameObject.Find("Player2Score").GetComponent<Text>();
     }
 
     void Update()
@@ -22,12 +23,11 @@ public class Paper : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(this);
-
         scoreCount += 1;
         scoreTextPlayer1.text = ("Player 1:") + scoreCount + (" / 5");
         scoreTextPlayer2.text = ("Player 2:") + scoreCount + (" / 5");
 
         Debug.Log("got the paper");
+        Destroy(gameObject);
     }
 }
