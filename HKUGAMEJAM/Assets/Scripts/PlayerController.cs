@@ -80,7 +80,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (movement <= 0)
+        if (movement < 0)
         {
             isRight = false;
             transform.localScale = new Vector2(.25f, transform.localScale.y);
