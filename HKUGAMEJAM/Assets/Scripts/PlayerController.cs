@@ -125,6 +125,7 @@ public class PlayerController : MonoBehaviour
         } else
         {
             isGrounded = false;
+            FindObjectOfType<AudioManager>().Play("PlayerLand");
         }
 
     }
@@ -135,6 +136,7 @@ public class PlayerController : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             jumpCount++;
+            FindObjectOfType<AudioManager>().Play("PlayerJump");
         }
     }
 
