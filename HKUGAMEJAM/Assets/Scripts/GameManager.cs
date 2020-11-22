@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if(scorePlayer1 == 5)
+        if(scorePlayer1 == 10)
         {
             Debug.Log("Player1 has won");
             SceneManager.LoadScene("Player1Wins");
