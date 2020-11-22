@@ -29,11 +29,7 @@ public class Paper : MonoBehaviour
             }
             if(collision.gameObject.name == "player 2")
             {
-<<<<<<< HEAD
-                gm.scorePlayer2 += 0.5f;
-=======
                 gm.scorePlayer2 += 1;
->>>>>>> e17ae134d17a5afb13e404ffc8e97859c2771ce4
                 scoreTextPlayer2.text = ("Player 2:") + gm.scorePlayer2 + (" / 5");
             }
             GameObject.Find("PaperSpawner").GetComponent<Spawner>().SpawnNextPaper();
