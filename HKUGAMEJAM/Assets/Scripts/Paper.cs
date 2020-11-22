@@ -25,12 +25,12 @@ public class Paper : MonoBehaviour
             if(collision.gameObject.name == "player 1")
             {
                 gm.scorePlayer1 += 1;
-                scoreTextPlayer1.text = ("Player 1:") + gm.scorePlayer1 + (" / 5");
+                scoreTextPlayer1.text = ("Player 1:") + gm.scorePlayer1 + (" / 10");
             }
             if(collision.gameObject.name == "player 2")
             {
                 gm.scorePlayer2 += 1;
-                scoreTextPlayer2.text = ("Player 2:") + gm.scorePlayer2 + (" / 5");
+                scoreTextPlayer2.text = ("Player 2:") + gm.scorePlayer2 + (" / 10");
             }
             GameObject.Find("PaperSpawner").GetComponent<Spawner>().SpawnNextPaper();
             FindObjectOfType<AudioManager>().Play("PaperPickup");

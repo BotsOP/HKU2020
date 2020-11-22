@@ -27,7 +27,7 @@ public class MainMenu : MonoBehaviour
     }
     public void Level6()
     {
-        SceneManager.LoadScene("Level 6");
+        SceneManager.LoadScene("Level 7");
     }
 
     public void QuitGame()
