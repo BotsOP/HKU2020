@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,13 +10,15 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if(scorePlayer1 == 3)
+        if(scorePlayer1 == 5)
         {
             Debug.Log("Player1 has won");
+            SceneManager.LoadScene("Player1Wins");
         }
-        if(scorePlayer2 == 3)
+        if(scorePlayer2 == 5)
         {
             Debug.Log("Player2 has won");
+            SceneManager.LoadScene("Player2Wins");
         }
     }
 }
