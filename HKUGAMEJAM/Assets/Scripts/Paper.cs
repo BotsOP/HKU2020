@@ -33,6 +33,7 @@ public class Paper : MonoBehaviour
                 scoreTextPlayer2.text = ("Player 2:") + gm.scorePlayer2 + (" / 5");
             }
             GameObject.Find("PaperSpawner").GetComponent<Spawner>().SpawnNextPaper();
+            FindObjectOfType<AudioManager>().Play("PaperPickup");
             Destroy(gameObject);
         }
     }

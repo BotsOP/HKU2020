@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 120427666652289625}
   - component: {fileID: 8458171525049008474}
   - component: {fileID: 3980269791428721674}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: player animations
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,7 +80,7 @@ GameObject:
   - component: {fileID: 3323949587456058995}
   - component: {fileID: 7748138795607673190}
   - component: {fileID: 1575462407757228086}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,7 +149,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2732515051070630784}
   - component: {fileID: 2732515051070630785}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: character2.0_3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,7 +231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2732515051121222719}
   - component: {fileID: 2732515051121222656}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: open
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -313,7 +313,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2732515051472914087}
   - component: {fileID: 2732515051472914088}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: close
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -395,7 +395,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2732515051652101804}
   - component: {fileID: 2732515051652101805}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -479,7 +479,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2732515052134471842}
   - component: {fileID: 2732515052134471843}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: character2.0_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -563,7 +563,7 @@ GameObject:
   - component: {fileID: 117007607}
   - component: {fileID: 117007608}
   - component: {fileID: -4107755054503294398}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: player 2
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -667,7 +667,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2371169150043096561}
   - component: {fileID: 4579891568330616789}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Feet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
