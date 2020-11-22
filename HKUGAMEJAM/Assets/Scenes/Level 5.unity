@@ -2536,6 +2536,26 @@ PrefabInstance:
       propertyPath: sounds.Array.data[3].volume
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5393519872813104877, guid: 3d72ebceeca266947a29c8883d05d7b3,
+        type: 3}
+      propertyPath: sounds.Array.data[4].name
+      value: Wind
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393519872813104877, guid: 3d72ebceeca266947a29c8883d05d7b3,
+        type: 3}
+      propertyPath: sounds.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: bca5647563fa1314ca7441865cd9a274, type: 3}
+    - target: {fileID: 5393519872813104877, guid: 3d72ebceeca266947a29c8883d05d7b3,
+        type: 3}
+      propertyPath: sounds.Array.data[4].volume
+      value: 0.602
+      objectReference: {fileID: 0}
+    - target: {fileID: 5393519872813104877, guid: 3d72ebceeca266947a29c8883d05d7b3,
+        type: 3}
+      propertyPath: sounds.Array.data[4].pitch
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9166362536866925641, guid: 3d72ebceeca266947a29c8883d05d7b3,
         type: 3}
       propertyPath: m_LocalPosition.x
