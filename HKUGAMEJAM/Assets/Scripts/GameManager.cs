@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
             Debug.Log("Player1 has won");
             SceneManager.LoadScene("Player1Wins");
         }
-        if(scorePlayer2 == 5)
+        if(scorePlayer2 == 10)
         {
             Debug.Log("Player2 has won");
             SceneManager.LoadScene("Player2Wins");
