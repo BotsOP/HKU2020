@@ -995,7 +995,7 @@ GameObject:
   m_Component:
   - component: {fileID: 335609435}
   m_Layer: 0
-  m_Name: GameObject (13)
+  m_Name: GameObject (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2860,7 +2860,7 @@ GameObject:
   m_Component:
   - component: {fileID: 893008349}
   m_Layer: 0
-  m_Name: GameObject (14)
+  m_Name: GameObject (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4600,7 +4600,7 @@ PrefabInstance:
     - target: {fileID: 1475530147856500485, guid: 9c20e2d8a6605e245ac29f159f343a44,
         type: 3}
       propertyPath: paperPositions.Array.size
-      value: 6
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 1475530147856500485, guid: 9c20e2d8a6605e245ac29f159f343a44,
         type: 3}
@@ -4630,6 +4630,51 @@ PrefabInstance:
     - target: {fileID: 1475530147856500485, guid: 9c20e2d8a6605e245ac29f159f343a44,
         type: 3}
       propertyPath: paperPositions.Array.data[5]
+      value: 
+      objectReference: {fileID: 1590962370}
+    - target: {fileID: 1475530147856500485, guid: 9c20e2d8a6605e245ac29f159f343a44,
+        type: 3}
+      propertyPath: paperPositions.Array.data[6]
+      value: 
+      objectReference: {fileID: 520532261}
+    - target: {fileID: 1475530147856500485, guid: 9c20e2d8a6605e245ac29f159f343a44,
+        type: 3}
+      propertyPath: paperPositions.Array.data[7]
+      value: 
+      objectReference: {fileID: 1335111209}
+    - target: {fileID: 1475530147856500485, guid: 9c20e2d8a6605e245ac29f159f343a44,
+        type: 3}
+      propertyPath: paperPositions.Array.data[8]
+      value: 
+      objectReference: {fileID: 1383108596}
+    - target: {fileID: 1475530147856500485, guid: 9c20e2d8a6605e245ac29f159f343a44,
+        type: 3}
+      propertyPath: paperPositions.Array.data[9]
+      value: 
+      objectReference: {fileID: 1331063902}
+    - target: {fileID: 1475530147856500485, guid: 9c20e2d8a6605e245ac29f159f343a44,
+        type: 3}
+      propertyPath: paperPositions.Array.data[10]
+      value: 
+      objectReference: {fileID: 709189118}
+    - target: {fileID: 1475530147856500485, guid: 9c20e2d8a6605e245ac29f159f343a44,
+        type: 3}
+      propertyPath: paperPositions.Array.data[11]
+      value: 
+      objectReference: {fileID: 1783779035}
+    - target: {fileID: 1475530147856500485, guid: 9c20e2d8a6605e245ac29f159f343a44,
+        type: 3}
+      propertyPath: paperPositions.Array.data[12]
+      value: 
+      objectReference: {fileID: 335609434}
+    - target: {fileID: 1475530147856500485, guid: 9c20e2d8a6605e245ac29f159f343a44,
+        type: 3}
+      propertyPath: paperPositions.Array.data[13]
+      value: 
+      objectReference: {fileID: 893008348}
+    - target: {fileID: 1475530147856500485, guid: 9c20e2d8a6605e245ac29f159f343a44,
+        type: 3}
+      propertyPath: paperPositions.Array.data[14]
       value: 
       objectReference: {fileID: 1590962370}
     - target: {fileID: 2198091885637503815, guid: 9c20e2d8a6605e245ac29f159f343a44,
@@ -4862,7 +4907,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1783779036}
   m_Layer: 0
-  m_Name: GameObject (12)
+  m_Name: GameObject (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
